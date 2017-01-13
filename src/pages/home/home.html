@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+   <button ion-button (click)="savefn()">Add Contact</button>
+   <ion-input type="text" [(ngModel)]="contacttobefound" placeholder="Enter display name"></ion-input>
+   <button ion-button (click)="findfn(contacttobefound)">Find</button>
+   <ion-list [hidden]="!search">
+       <ion-item *ngFor="let item of contactsfound">
+           {{item.displayName}}
+       </ion-item>
+   </ion-list>
+</ion-content>

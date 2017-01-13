@@ -1,0 +1,34 @@
+<!--
+  Generated template for the Addcontact page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>addcontact</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ <ion-input type="text" [(ngModel)]="newcontact.displayName"
+                placeholder="Enter Display Name"></ion-input>
+    <ion-input type="text" [(ngModel)]="newcontact.nickname"
+                placeholder="Enter Nick Name"></ion-input>
+    <ion-input type="text" [(ngModel)]="newcontact.phnumber"
+                placeholder="Enter Phone number"></ion-input>
+    <ion-list>
+        <ion-item>
+            <ion-label>Type</ion-label>            
+    <ion-select [(ngModel)] = "newcontact.phtype">
+        <ion-option value="home">Home</ion-option>
+        <ion-option value="work">Work</ion-option>
+        <ion-option value="other">Other</ion-option>
+        </ion-select>
+        </ion-item>
+    </ion-list>
+        <button ion-button (click)="addcontact(newcontact)">Save</button>
+</ion-content>
